@@ -20,14 +20,14 @@ function download_and_extract_android_studio {
 # For details, see:
 # https://help.ubuntu.com/community/KVM/Installation
 function configure_kvm_for_android_emulator {
-    sudo apt-get install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
-    sudo adduser `id -un` libvirt
-    sudo adduser `id -un` kvm
+    ! "$CI" && sudo apt-get install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+    ! "$CI" && sudo adduser `id -un` libvirt
+    ! "$CI" && sudo adduser `id -un` kvm
 }
 
 download_and_extract_android_studio
 
-! "$CI" && configure_kvm_for_android_emulator
+configure_kvm_for_android_emulator
 
 # Install Visual Studio Code
 # For details, see: https://snapcraft.io/code and https://code.visualstudio.com/download
