@@ -9,4 +9,4 @@ function install_xfce {
     sudo echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session
 }
 
-! is_installed xfce4 && install_xfce
+install_xfce

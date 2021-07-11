@@ -19,4 +19,4 @@ function download_and_install_nvidia_driver {
     sudo apt-get install -y cuda-drivers
 }
 
-! is_installed cuda-drivers && download_and_install_nvidia_driver
+download_and_install_nvidia_driver

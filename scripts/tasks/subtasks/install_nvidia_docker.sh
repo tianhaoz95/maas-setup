@@ -13,4 +13,4 @@ function install_nvidia_docker {
     sudo apt-get install -y nvidia-docker2
 }
 
-! is_installed nvidia-docker2 && install_nvidia_docker
+install_nvidia_docker

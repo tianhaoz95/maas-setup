@@ -14,4 +14,4 @@ function install_docker {
     sudo chmod +x /usr/local/bin/docker-compose
 }
 
-! is_installed docker-ce && install_docker
+install_docker
