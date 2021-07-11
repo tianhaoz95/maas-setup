@@ -12,7 +12,7 @@ function download_and_extract { # args URL TEMP_FILENAME TARGET_DIR
 }
 
 function add_path_to_bashrc { # args PATH
-    echo "export PATH=$PATH:$1" >> ~/.bashrc
+    echo "export PATH=\"\$PATH:$1\"" >> ~/.bashrc
 }
 
 function is_installed {  # args PACKAGE_NAME
