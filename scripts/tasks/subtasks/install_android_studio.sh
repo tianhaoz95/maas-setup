@@ -13,16 +13,16 @@ function download_and_extract_android_studio {
     mkdir -p $ANDROID_STUDIO_INSTALL_DIR
     download_and_extract $LINUX_ANDROID_STUDIO_DOWNLOAD_URL /tmp/android-studio-ide-202.7486908-linux.tar.gz $ANDROID_STUDIO_INSTALL_DIR
     sudo apt-get update -y
-    ! "$CI" && sudo apt-get install -y scrcpy
+    sudo apt-get install -y scrcpy
 }
 
 # Configure KVM for Android emulator
 # For details, see:
 # https://help.ubuntu.com/community/KVM/Installation
 function configure_kvm_for_android_emulator {
-    ! "$CI" && sudo apt-get install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
-    ! "$CI" && sudo adduser `id -un` libvirt
-    ! "$CI" && sudo adduser `id -un` kvm
+    sudo apt-get install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+    sudo adduser `id -un` libvirt
+    sudo adduser `id -un` kvm
 }
 
 download_and_extract_android_studio
@@ -31,8 +31,8 @@ configure_kvm_for_android_emulator
 
 # Install Visual Studio Code
 # For details, see: https://snapcraft.io/code and https://code.visualstudio.com/download
-! "$CI" && sudo snap install code --classic
+sudo snap install code --classic
 
 # Install Flutter SDK
 # For details, see: https://flutter.dev/docs/get-started/install/linux
-! "$CI" && sudo snap install flutter --classic
+sudo snap install flutter --classic

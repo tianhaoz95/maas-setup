@@ -31,5 +31,6 @@ source "$SUBTASK_SCRIPT_DIR/install_crd.sh"
 echo "::endgroup::"
 
 echo "::group::Install Android Studio"
-source "$SUBTASK_SCRIPT_DIR/install_android_studio.sh"
+"$CI" && echo "Install Android Studio in CI container will not work. Skip."
+! "$CI" && source "$SUBTASK_SCRIPT_DIR/install_android_studio.sh"
 echo "::endgroup::"
