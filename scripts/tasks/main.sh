@@ -8,7 +8,7 @@ echo "::endgroup::"
 
 echo "::group::Install xfce4"
 ! "$CI" && source "$SUBTASK_SCRIPT_DIR/install_xfce.sh"
-echo "::endgroup::
+echo "::endgroup::"
 
 echo "::group::Install CRD"
 source "$SUBTASK_SCRIPT_DIR/install_crd.sh"
