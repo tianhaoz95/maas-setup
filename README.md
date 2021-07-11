@@ -2,6 +2,6 @@
 
 ```bash
 sudo apt update -y && sudo apt install git
-https://github.com/tianhaoz95/maas-setup.git /tmp/maas-setup
+git clone https://github.com/tianhaoz95/maas-setup.git /tmp/maas-setup
 cd /tmp/maas-setup && source setup.sh
 ```
