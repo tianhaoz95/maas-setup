@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: end 2 end test
-        run: source configure.sh && source setup.sh
+        run: source setup.sh
