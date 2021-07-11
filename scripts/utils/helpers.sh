@@ -2,7 +2,7 @@
 
 function download_and_install { # args URL FILENAME
     curl -L -o "$2" "$1"
-    yes | sudo dpkg --install "$2"
+    yes | sudo dpkg --install "$2" || true
     sudo apt-get install -y --fix-broken
 }
 
