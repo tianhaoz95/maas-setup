@@ -10,7 +10,7 @@ function download_and_extract_android_studio {
     ANDROID_PLATFORM_TOOLS_INSTALL_DIR="$HOME/Android/Sdk/platform-tools"
     add_path_to_bashrc "$ANDROID_STUDIO_INSTALL_DIR\bin"
     add_path_to_bashrc "$ANDROID_PLATFORM_TOOLS_INSTALL_DIR"
-    mkdir -p $TOOLS_LOCATION
+    mkdir -p $ANDROID_STUDIO_INSTALL_DIR
     download_and_extract $LINUX_ANDROID_STUDIO_DOWNLOAD_URL /tmp/android-studio-ide-202.7486908-linux.tar.gz $ANDROID_STUDIO_INSTALL_DIR
     sudo apt-get update -y
     sudo apt-get install -y scrcpy
