@@ -6,6 +6,11 @@ echo "::group::Install Basic Dependencies"
 source "$SUBTASK_SCRIPT_DIR/install_basic_deps.sh"
 echo "::endgroup::"
 
+echo "::group::Disable sleep"
+"$CI" && echo "Disabling sleep in CI container will not work. Skip."
+! "$CI" && source "$SUBTASK_SCRIPT_DIR/disable_sleep.sh"
+echo "::endgroup::"
+
 echo "::group::Install Nvidia driver"
 "$CI" && echo "Install Nvidia driver in CI container will not work. Skip."
 ! "$CI" && source "$SUBTASK_SCRIPT_DIR/install_nvidia_driver.sh"
