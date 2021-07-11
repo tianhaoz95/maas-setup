@@ -29,3 +29,7 @@ echo "::endgroup::"
 echo "::group::Install CRD"
 source "$SUBTASK_SCRIPT_DIR/install_crd.sh"
 echo "::endgroup::"
+
+echo "::group::Install Android Studio"
+source "$SUBTASK_SCRIPT_DIR/install_android_studio.sh"
+echo "::endgroup::"

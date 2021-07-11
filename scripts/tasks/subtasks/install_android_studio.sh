@@ -27,12 +27,12 @@ function configure_kvm_for_android_emulator {
 
 download_and_extract_android_studio
 
-configure_kvm_for_android_emulator
+! "$CI" && configure_kvm_for_android_emulator
 
 # Install Visual Studio Code
 # For details, see: https://snapcraft.io/code and https://code.visualstudio.com/download
-sudo snap install code --classic
+! "$CI" && sudo snap install code --classic
 
 # Install Flutter SDK
 # For details, see: https://flutter.dev/docs/get-started/install/linux
-sudo snap install flutter --classic
+! "$CI" && sudo snap install flutter --classic
