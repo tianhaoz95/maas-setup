@@ -7,4 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: source configure.sh && source setup.sh
+      - name: end 2 end test
+        run: source configure.sh && source setup.sh

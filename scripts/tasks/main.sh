@@ -7,7 +7,8 @@ source "$SUBTASK_SCRIPT_DIR/install_basic_deps.sh"
 echo "::endgroup::"
 
 echo "::group::Install xfce4"
-source "$SUBTASK_SCRIPT_DIR/install_xfce.sh"
+"$CI" && echo "Install desktop in CI container will not work. Skip."
+! "$CI" && source "$SUBTASK_SCRIPT_DIR/install_xfce.sh"
 echo "::endgroup::"
 
 echo "::group::Install CRD"
