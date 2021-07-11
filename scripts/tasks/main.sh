@@ -12,4 +12,4 @@ echo "::endgroup::"
 
 echo "::group::Install CRD"
 source "$SUBTASK_SCRIPT_DIR/install_crd.sh"
-echo "::endgroup::
+echo "::endgroup::"
