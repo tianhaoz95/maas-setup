@@ -13,7 +13,7 @@ function download_and_extract_android_studio {
     mkdir -p $ANDROID_STUDIO_INSTALL_DIR
     download_and_extract $LINUX_ANDROID_STUDIO_DOWNLOAD_URL /tmp/android-studio-ide-202.7486908-linux.tar.gz $ANDROID_STUDIO_INSTALL_DIR
     sudo apt-get update -y
-    sudo apt-get install -y scrcpy
+    ! "$CI" && sudo apt-get install -y scrcpy
 }
 
 # Configure KVM for Android emulator
