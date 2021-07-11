@@ -7,4 +7,5 @@ sudo apt update -y && sudo apt install -y \
     bzip2 \
     zip \
     unzip \
-    vim
+    vim \
+    net-tools
