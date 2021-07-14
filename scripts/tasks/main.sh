@@ -37,3 +37,7 @@ echo "::endgroup::"
 echo "::group::Install Android Studio"
 ! "$CI" && source "$SUBTASK_SCRIPT_DIR/install_android_studio.sh"
 echo "::endgroup::"
+
+echo "::group::Configure KVM"
+! "$CI" && source "$SUBTASK_SCRIPT_DIR/configure_kvm.sh"
+echo "::endgroup::"
